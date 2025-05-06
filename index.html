@@ -1,108 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="আপনার ওয়েবসাইটের সংক্ষিপ্ত বিবরণ এখানে দিন">
-    <link rel="icon" href="logo.png" type="image/png">
-    <title>আমাদের প্রতিষ্ঠান</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAZIM WEB SHOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #333;
+      padding: 20px;
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .circle, .square {
+      width: 40px;
+      height: 40px;
+      background: #000;
+    }
+
+    .circle {
+      border-radius: 50%;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .section-title {
+      background-color: #fff;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .thumbnail {
+      background: #eee;
+      padding: 40px 0;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 10px;
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f56a79;
+      color: #fff;
+      border-color: #f56a79;
+    }
+
+    .more-btn {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .more-btn:hover {
+      background: #f56a79;
+      color: #fff;
+      border-color: #f56a79;
+    }
+  </style>
 </head>
 <body>
-    <header class="container">
-        <img src="logo.png" alt="Logo" style="width: 80px;">
-        <h1>আমাদের প্রতিষ্ঠান</h1>
-    </header>
 
-    <nav class="container">
-        <a href="#home">হোম</a> |
-        <a href="#about">আমাদের সম্পর্কে</a> |
-        <a href="#services">সার্ভিস</a> |
-        <a href="#projects">প্রজেক্ট</a> |
-        <a href="#blog">ব্লগ</a> |
-        <a href="#contact">যোগাযোগ</a>
-    </nav>
+  <div class="header">
+    <div class="circle"></div>
+    <div class="title">TAZIM WEB SHOP</div>
+    <div class="square"></div>
+  </div>
 
-    <section id="home" class="container">
-        <div class="slider">
-            <img src="slide1.jpg" class="slide" style="width:100%">
-            <button onclick="prevSlide()">Prev</button>
-            <button onclick="nextSlide()">Next</button>
-        </div>
-    </section>
+  <div class="section-title">All Website List</div>
 
-    <section id="about" class="container">
-        <img src="about.jpg" alt="About" style="width: 100%; border-radius: 12px;">
-        <p>আমাদের প্রতিষ্ঠান একটি সামাজিক ও ডিজিটাল উন্নয়ন সংস্থা...</p>
-    </section>
+  <!-- Repeat for each website item -->
+  <div class="card">
+    <div class="thumbnail">thumbnail</div>
+    <div class="btn-group">
+      <button class="btn">Buy Now</button>
+      <button class="btn">Demo Site</button>
+    </div>
+  </div>
 
-    <section id="services" class="container">
-        <h2>আমাদের সার্ভিসসমূহ</h2>
-        <ul>
-            <li>সার্ভিস ১</li>
-            <li>সার্ভিস ২</li>
-            <li>সার্ভিস ৩</li>
-        </ul>
-    </section>
+  <div class="card">
+    <div class="thumbnail">thumbnail</div>
+    <div class="btn-group">
+      <button class="btn">Buy Now</button>
+      <button class="btn">Demo Site</button>
+    </div>
+  </div>
 
-    <section id="projects" class="container">
-        <h2>আমাদের প্রজেক্ট</h2>
-        <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-            <button>Preview</button>
-            <button>Buy Now</button>
-        </div>
-        <!-- আরও প্রজেক্ট এখানে -->
-        <a href="more-projects.html">More Projects</a>
-    </section>
+  <div class="card">
+    <div class="thumbnail">thumbnail</div>
+    <div class="btn-group">
+      <button class="btn">Buy Now</button>
+      <button class="btn">Demo Site</button>
+    </div>
+  </div>
 
-    <section class="container">
-        <h2>কাস্টমার রিভিউ</h2>
-        <p>“খুবই ভালো সার্ভিস পেয়েছি।” - একজন গ্রাহক</p>
-    </section>
+  <button class="more-btn">more website</button>
 
-    <section id="contact" class="container">
-        <h2>যোগাযোগ করুন</h2>
-        <p>ফোন: ০১২৩৪৫৬৭৮৯০</p>
-        <p>ইমেইল: example@email.com</p>
-        <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
-        <div>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </section>
-
-    <section id="blog" class="container">
-        <h2>ব্লগ</h2>
-        <div>
-            <a href="https://facebook.com/post1" target="_blank">
-                <img src="blog-thumb1.jpg" alt="Blog 1">
-            </a>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>ভিডিও</h2>
-        <div class="video-player">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <footer>
-        <p>আমাদের প্রতিষ্ঠান &copy; ২০২৫</p>
-        <div>
-            <a href="#">হোম</a> |
-            <a href="#services">সার্ভিস</a> |
-            <a href="#contact">যোগাযোগ</a>
-        </div>
-        <p>ফলো করুন:
-            <a href="#">Facebook</a> |
-            <a href="#">YouTube</a>
-        </p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
