@@ -14,16 +14,17 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
       color: #333;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .header {
       width: 100%;
+      max-width: 600px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,7 +33,6 @@
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
-      max-width: 500px;
     }
 
     .circle, .square {
@@ -58,17 +58,23 @@
       border-radius: 8px;
       margin-bottom: 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .card {
       background: #fff;
-      padding: 10px;
+      padding: 15px;
       border-radius: 12px;
       margin-bottom: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 400px;
       text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
     }
 
     .thumbnail {
@@ -76,6 +82,7 @@
       padding: 40px 0;
       font-size: 18px;
       margin-bottom: 10px;
+      border-radius: 8px;
     }
 
     .btn-group {
@@ -102,7 +109,6 @@
     }
 
     .more-btn {
-      margin-top: 20px;
       padding: 12px 20px;
       background: #fff;
       border: 2px solid #333;
@@ -129,32 +135,52 @@
 
   <div class="section-title">All Website List</div>
 
-  <!-- Repeat for each website item -->
-  <div class="card">
-    <div class="thumbnail">thumbnail</div>
-    <div class="btn-group">
-      <button class="btn">Buy Now</button>
-      <button class="btn">Demo Site</button>
-    </div>
+  <div id="website-list">
+    <!-- Cards will be inserted here dynamically -->
   </div>
 
-  <div class="card">
-    <div class="thumbnail">thumbnail</div>
-    <div class="btn-group">
-      <button class="btn">Buy Now</button>
-      <button class="btn">Demo Site</button>
-    </div>
-  </div>
+  <button class="more-btn" onclick="loadWebsites()">More Website</button>
 
-  <div class="card">
-    <div class="thumbnail">thumbnail</div>
-    <div class="btn-group">
-      <button class="btn">Buy Now</button>
-      <button class="btn">Demo Site</button>
-    </div>
-  </div>
+  <script>
+    let websiteCount = 0;
 
-  <button class="more-btn">more website</button>
+    const websiteData = [
+      { thumbnail: 'Thumbnail 1', buyLink: '#', demoLink: '#' },
+      { thumbnail: 'Thumbnail 2', buyLink: '#', demoLink: '#' },
+      { thumbnail: 'Thumbnail 3', buyLink: '#', demoLink: '#' },
+      { thumbnail: 'Thumbnail 4', buyLink: '#', demoLink: '#' },
+      { thumbnail: 'Thumbnail 5', buyLink: '#', demoLink: '#' },
+      { thumbnail: 'Thumbnail 6', buyLink: '#', demoLink: '#' }
+    ];
+
+    function createCard(data) {
+      return `
+        <div class="card">
+          <div class="thumbnail">${data.thumbnail}</div>
+          <div class="btn-group">
+            <a class="btn" href="${data.buyLink}" target="_blank">Buy Now</a>
+            <a class="btn" href="${data.demoLink}" target="_blank">Demo Site</a>
+          </div>
+        </div>
+      `;
+    }
+
+    function loadWebsites() {
+      const list = document.getElementById('website-list');
+      const nextItems = websiteData.slice(websiteCount, websiteCount + 3);
+      nextItems.forEach(item => {
+        list.innerHTML += createCard(item);
+      });
+      websiteCount += 3;
+      if (websiteCount >= websiteData.length) {
+        document.querySelector('.more-btn').disabled = true;
+        document.querySelector('.more-btn').innerText = 'No More Website';
+      }
+    }
+
+    // Load first 3 on page load
+    window.onload = loadWebsites;
+  </script>
 
 </body>
 </html>
