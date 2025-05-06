@@ -6,181 +6,171 @@
   <title>TAZIM WEB SHOP</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    * {
+    /* আপনার CSS কোড এখানে পেস্ট করা হয়েছে */
+    /* এখানে আপনার CSS কোডটি রেখেছি */
+    html, body {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
       color: #333;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
-    .header {
-      width: 100%;
-      max-width: 600px;
+    header {
+      background: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #fff;
-      padding: 10px 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .circle, .square {
-      width: 40px;
+    .logo {
       height: 40px;
+    }
+
+    .menu-button {
       background: #000;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
     }
 
-    .circle {
-      border-radius: 50%;
-    }
-
-    .title {
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .section-title {
-      background-color: #fff;
-      padding: 10px 20px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .card {
+    nav {
+      display: none;
       background: #fff;
-      padding: 15px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
+      padding: 10px;
       text-align: center;
-      transition: transform 0.2s ease;
     }
 
-    .card:hover {
-      transform: scale(1.02);
+    nav a {
+      display: block;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #eee;
+    }
+
+    h1 {
+      text-align: center;
+      background: #fff;
+      padding: 20px 0;
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .website-card {
+      background: #fff;
+      margin: 20px auto;
+      padding: 10px;
+      max-width: 500px;
+      text-align: center;
     }
 
     .thumbnail {
-      background: #eee;
-      padding: 40px 0;
-      font-size: 18px;
+      background: #ccc;
+      height: 150px;
       margin-bottom: 10px;
-      border-radius: 8px;
     }
 
-    .btn-group {
+    .button-group {
       display: flex;
-      justify-content: space-between;
-      gap: 10px;
+      justify-content: space-around;
+      margin-bottom: 20px;
     }
 
-    .btn {
+    .button-group a {
       flex: 1;
-      padding: 10px;
-      background: #fff;
-      border: 2px solid #333;
+      margin: 0 5px;
+      text-align: center;
+      padding: 12px;
+      background-color: #fd7e14;
+      color: #fff;
+      text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
     }
 
-    .btn:hover {
-      background: #f56a79;
-      color: #fff;
-      border-color: #f56a79;
+    .button-group a:hover {
+      background-color: #f56a79;
     }
 
-    .more-btn {
-      padding: 12px 20px;
-      background: #fff;
-      border: 2px solid #333;
+    .more-button {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      padding: 12px;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
       border-radius: 8px;
       font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
+      text-decoration: none;
+      border: 2px solid #000;
     }
 
-    .more-btn:hover {
-      background: #f56a79;
+    .more-button:hover {
+      background-color: #f56a79;
       color: #fff;
-      border-color: #f56a79;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <div class="circle"></div>
-    <div class="title">TAZIM WEB SHOP</div>
-    <div class="square"></div>
+<header>
+  <img src="your-logo.png" alt="Logo" class="logo">
+  <h2>TAZIM WEB SHOP</h2>
+  <button class="menu-button" onclick="toggleMenu()">মেনু</button>
+</header>
+
+<nav id="menu">
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+
+<h1>All Website List</h1>
+
+<div class="website-card">
+  <div class="thumbnail">Thumbnail 1</div>
+  <div class="button-group">
+    <a href="https://wa.me/yourwhatsapplink" target="_blank">Buy Now</a>
+    <a href="demo1.html" target="_blank">Demo Site</a>
   </div>
+</div>
 
-  <div class="section-title">All Website List</div>
-
-  <div id="website-list">
-    <!-- Cards will be inserted here dynamically -->
+<div class="website-card">
+  <div class="thumbnail">Thumbnail 2</div>
+  <div class="button-group">
+    <a href="https://wa.me/yourwhatsapplink" target="_blank">Buy Now</a>
+    <a href="demo2.html" target="_blank">Demo Site</a>
   </div>
+</div>
 
-  <button class="more-btn" onclick="loadWebsites()">More Website</button>
+<div class="website-card">
+  <div class="thumbnail">Thumbnail 3</div>
+  <div class="button-group">
+    <a href="https://wa.me/yourwhatsapplink" target="_blank">Buy Now</a>
+    <a href="demo3.html" target="_blank">Demo Site</a>
+  </div>
+</div>
 
-  <script>
-    let websiteCount = 0;
+<a href="more-websites.html" class="more-button">more website</a>
 
-    const websiteData = [
-      { thumbnail: 'Thumbnail 1', buyLink: '#', demoLink: '#' },
-      { thumbnail: 'Thumbnail 2', buyLink: '#', demoLink: '#' },
-      { thumbnail: 'Thumbnail 3', buyLink: '#', demoLink: '#' },
-      { thumbnail: 'Thumbnail 4', buyLink: '#', demoLink: '#' },
-      { thumbnail: 'Thumbnail 5', buyLink: '#', demoLink: '#' },
-      { thumbnail: 'Thumbnail 6', buyLink: '#', demoLink: '#' }
-    ];
-
-    function createCard(data) {
-      return `
-        <div class="card">
-          <div class="thumbnail">${data.thumbnail}</div>
-          <div class="btn-group">
-            <a class="btn" href="${data.buyLink}" target="_blank">Buy Now</a>
-            <a class="btn" href="${data.demoLink}" target="_blank">Demo Site</a>
-          </div>
-        </div>
-      `;
-    }
-
-    function loadWebsites() {
-      const list = document.getElementById('website-list');
-      const nextItems = websiteData.slice(websiteCount, websiteCount + 3);
-      nextItems.forEach(item => {
-        list.innerHTML += createCard(item);
-      });
-      websiteCount += 3;
-      if (websiteCount >= websiteData.length) {
-        document.querySelector('.more-btn').disabled = true;
-        document.querySelector('.more-btn').innerText = 'No More Website';
-      }
-    }
-
-    // Load first 3 on page load
-    window.onload = loadWebsites;
-  </script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
 
 </body>
 </html>
