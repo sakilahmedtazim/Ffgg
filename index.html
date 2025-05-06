@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TAZIM WEB SHOP</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
@@ -18,7 +18,6 @@
       color: #333;
     }
 
-    /* HEADER */
     header {
       background: #fff;
       padding: 15px 20px;
@@ -26,47 +25,52 @@
       align-items: center;
       justify-content: space-between;
       position: relative;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .logo {
+    .logo-title {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .logo img {
+    .logo-title img {
       height: 40px;
       width: 40px;
       border-radius: 50%;
     }
 
-    .logo h1 {
+    .logo-title h1 {
       font-size: 20px;
       color: #111;
     }
 
-    .menu-toggle {
-      background: #000;
-      color: #fff;
-      padding: 8px 14px;
-      border: none;
-      font-size: 16px;
+    .menu-icon {
       cursor: pointer;
+      width: 25px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    /* SIDE MENU */
+    .menu-icon span {
+      height: 3px;
+      background: #111;
+      border-radius: 2px;
+    }
+
     nav {
       position: fixed;
       top: 0;
       left: -260px;
-      width: 250px;
+      width: 220px;
       height: 100%;
       background: #fff;
       padding: 20px;
       box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
       transition: left 0.3s ease;
-      z-index: 1000;
+      z-index: 999;
     }
 
     nav.active {
@@ -74,15 +78,15 @@
     }
 
     nav h3 {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #f56a79;
     }
 
     nav a {
       display: block;
+      padding: 10px 0;
       color: #333;
       text-decoration: none;
-      padding: 10px 0;
       border-bottom: 1px solid #eee;
     }
 
@@ -95,70 +99,76 @@
       background: #fff;
       padding: 20px;
       font-size: 24px;
-      color: #111;
       margin-top: 10px;
     }
 
     .website-card {
       background: #fff;
       margin: 20px auto;
-      padding: 10px;
-      max-width: 500px;
+      padding: 15px;
+      max-width: 450px;
       text-align: center;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
 
     .thumbnail {
       background: #ddd;
       height: 150px;
-      margin-bottom: 10px;
       border-radius: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
       font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #555;
     }
 
     .button-group {
       display: flex;
-      justify-content: space-around;
-      margin-bottom: 10px;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
     }
 
     .button-group a {
       flex: 1;
-      margin: 5px;
       padding: 12px;
-      background-color: #fd7e14;
-      color: #fff;
+      background-color: #fff;
+      border: 2px solid #000;
+      color: #000;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      text-align: center;
+      transition: 0.3s ease;
     }
 
     .button-group a:hover {
-      background-color: #f56a79;
+      background: #000;
+      color: #fff;
     }
 
     .more-button {
       display: block;
-      width: 200px;
-      margin: 30px auto;
+      width: 220px;
+      margin: 40px auto;
       padding: 12px;
-      background-color: #fff;
-      color: #000;
+      background-color: #f56a79;
+      color: #fff;
       text-align: center;
       border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
-      border: 2px solid #000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .more-button:hover {
-      background-color: #f56a79;
-      color: #fff;
+      background-color: #fd7e14;
     }
 
     @media (max-width: 600px) {
@@ -175,15 +185,19 @@
 <body>
 
 <header>
-  <div class="logo">
-    <img src="Picsart_23-05-01_20-56-34-823.png" alt="Logo">
+  <div class="logo-title">
+    <img src="logo.png" alt="Logo" />
     <h1>TAZIM WEB SHOP</h1>
   </div>
-  <button class="menu-toggle" onclick="toggleMenu()">মেনু</button>
+  <div class="menu-icon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 <nav id="sideMenu">
-  <h3>Navigation</h3>
+  <h3>Menu</h3>
   <a href="#">Home</a>
   <a href="#">About</a>
   <a href="#">Contact</a>
@@ -195,6 +209,7 @@
 <!-- Website Entry 1 -->
 <div class="website-card">
   <div class="thumbnail">Thumbnail 1</div>
+  <p class="description">এই সাইটটি একটি পারসোনাল ব্লগ ডিজাইন যা মোবাইল ফ্রেন্ডলি।</p>
   <div class="button-group">
     <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20this%20website" target="_blank">Buy Now</a>
     <a href="demo1.html" target="_blank">Demo Site</a>
@@ -204,6 +219,7 @@
 <!-- Website Entry 2 -->
 <div class="website-card">
   <div class="thumbnail">Thumbnail 2</div>
+  <p class="description">একটি ই-কমার্স ল্যান্ডিং পেজ যেটি দ্রুত লোড হয় এবং ইউজার ফ্রেন্ডলি।</p>
   <div class="button-group">
     <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20this%20website" target="_blank">Buy Now</a>
     <a href="demo2.html" target="_blank">Demo Site</a>
@@ -213,13 +229,14 @@
 <!-- Website Entry 3 -->
 <div class="website-card">
   <div class="thumbnail">Thumbnail 3</div>
+  <p class="description">এই ওয়েবসাইটটি একটি দাতব্য প্রতিষ্ঠানের জন্য তৈরি।</p>
   <div class="button-group">
     <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20this%20website" target="_blank">Buy Now</a>
     <a href="demo3.html" target="_blank">Demo Site</a>
   </div>
 </div>
 
-<a class="more-button" href="more-websites.html">more website</a>
+<a class="more-button" href="more-websites.html">Explore More Websites</a>
 
 <script>
   function toggleMenu() {
