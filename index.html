@@ -7,17 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #f6d365, #fda085);
       color: #333;
     }
-
     header {
       background: #fff;
       padding: 15px 20px;
@@ -27,24 +23,20 @@
       position: relative;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-
     .logo-title {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-
     .logo-title img {
       height: 40px;
       width: 40px;
       border-radius: 50%;
     }
-
     .logo-title h1 {
       font-size: 20px;
       color: #111;
     }
-
     .menu-icon {
       cursor: pointer;
       width: 25px;
@@ -53,13 +45,11 @@
       flex-direction: column;
       justify-content: space-between;
     }
-
     .menu-icon span {
       height: 3px;
       background: #111;
       border-radius: 2px;
     }
-
     nav {
       position: fixed;
       top: 0;
@@ -72,16 +62,13 @@
       transition: left 0.3s ease;
       z-index: 999;
     }
-
     nav.active {
       left: 0;
     }
-
     nav h3 {
       margin-bottom: 15px;
       color: #f56a79;
     }
-
     nav a {
       display: block;
       padding: 10px 0;
@@ -89,11 +76,9 @@
       text-decoration: none;
       border-bottom: 1px solid #eee;
     }
-
     nav a:hover {
       color: #fd7e14;
     }
-
     h2.section-title {
       text-align: center;
       background: #fff;
@@ -101,7 +86,6 @@
       font-size: 24px;
       margin-top: 10px;
     }
-
     .website-card {
       background: #fff;
       margin: 20px auto;
@@ -111,31 +95,28 @@
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
-
     .thumbnail {
-      background: #ddd;
       height: 150px;
       border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
+      overflow: hidden;
       margin-bottom: 10px;
     }
-
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .description {
       margin: 10px 0;
       font-size: 14px;
       color: #555;
     }
-
     .button-group {
       display: flex;
       justify-content: space-between;
       gap: 10px;
       margin-top: 10px;
     }
-
     .button-group a {
       flex: 1;
       padding: 12px;
@@ -147,12 +128,10 @@
       font-weight: bold;
       transition: 0.3s ease;
     }
-
     .button-group a:hover {
       background: #000;
       color: #fff;
     }
-
     .more-button {
       display: block;
       width: 220px;
@@ -166,16 +145,13 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
     .more-button:hover {
       background-color: #fd7e14;
     }
-
     @media (max-width: 600px) {
       .button-group {
         flex-direction: column;
       }
-
       .button-group a {
         width: 100%;
       }
@@ -200,36 +176,38 @@
   <h3>Menu</h3>
   <a href="#">Home</a>
   <a href="#">About</a>
-  <a href="#">Services</a>
   <a href="#">Contact</a>
+  <a href="#">Support</a>
 </nav>
 
 <h2 class="section-title">All Website List</h2>
 
-<!-- Repeatable Website Card Template -->
+<!-- Website Entry 1 -->
 <div class="website-card">
-  <div class="thumbnail">Thumbnail 1</div>
-  <div class="description">This is a simple ecommerce layout with 3 pricing plans.</div>
+  <div class="thumbnail"><img src="thumb1.jpg" alt="Thumbnail 1" /></div>
+  <div class="description">Simple business website with responsive layout.</div>
   <div class="button-group">
-    <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20this%20website">Buy Now</a>
+    <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20Website%201" target="_blank">Buy Now</a>
     <a href="demo1.html" target="_blank">Demo Site</a>
   </div>
 </div>
 
+<!-- Website Entry 2 -->
 <div class="website-card">
-  <div class="thumbnail">Thumbnail 2</div>
-  <div class="description">A portfolio template with responsive sections and contact form.</div>
+  <div class="thumbnail"><img src="thumb2.jpg" alt="Thumbnail 2" /></div>
+  <div class="description">E-commerce template with modern cart system.</div>
   <div class="button-group">
-    <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20this%20website">Buy Now</a>
+    <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20Website%202" target="_blank">Buy Now</a>
     <a href="demo2.html" target="_blank">Demo Site</a>
   </div>
 </div>
 
+<!-- Website Entry 3 -->
 <div class="website-card">
-  <div class="thumbnail">Thumbnail 3</div>
-  <div class="description">Agency style template for business or landing pages.</div>
+  <div class="thumbnail"><img src="thumb3.jpg" alt="Thumbnail 3" /></div>
+  <div class="description">Portfolio design for creative professionals.</div>
   <div class="button-group">
-    <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20this%20website">Buy Now</a>
+    <a href="https://wa.me/8801XXXXXXXXX?text=I%20want%20to%20buy%20Website%203" target="_blank">Buy Now</a>
     <a href="demo3.html" target="_blank">Demo Site</a>
   </div>
 </div>
